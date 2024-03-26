@@ -7,6 +7,8 @@
  * Represents the state of the theme class context.
  */
 export interface IThemeClassState {
+    /** The index of the previous theme class */
+    previous: number | null;
     /** The index of the current theme class. */
     current: number;
     /** Array containing theme class names. */
@@ -15,6 +17,8 @@ export interface IThemeClassState {
     is_loading: boolean;
     /** Holds any error that occurred within the context, or null if no error occurred. */
     error: Error | null;
+    /** Indicates whether persisted theme data was loaded */
+    loaded_persisted_data: boolean;
 }
 
 /**
@@ -29,7 +33,10 @@ export type IThemePersistantDTO = Pick<
  * Represents the context for managing theme classes.
  */
 export interface IThemeClassContext
-    extends Pick<IThemeClassState, "is_loading" | "error"> {
+    extends Pick<
+        IThemeClassState,
+        "is_loading" | "error" | "loaded_persisted_data"
+    > {
     /** Loads the persisted theme state from the provided DTO. */
     loadState: (theme_dto: IThemePersistantDTO) => void;
     /** Toggles the theme class. */
@@ -58,6 +65,7 @@ export const THEME_CLASS_ACTIONS = [
     "TOGGLE_THEME",
     "LOAD_STATE",
     "SET_DEFAULT",
+    "FLAG_PERSISTED_DATA_LOAD",
 ] as const;
 
 /**
@@ -69,7 +77,8 @@ export type IThemeClassAction =
     | { type: (typeof THEME_CLASS_ACTIONS)[2]; payload: string }
     | { type: (typeof THEME_CLASS_ACTIONS)[3]; payload: undefined }
     | { type: (typeof THEME_CLASS_ACTIONS)[4]; payload: IThemePersistantDTO }
-    | { type: (typeof THEME_CLASS_ACTIONS)[5]; payload: string };
+    | { type: (typeof THEME_CLASS_ACTIONS)[5]; payload: string }
+    | { type: (typeof THEME_CLASS_ACTIONS)[6]; payload: boolean };
 
 /**
  * Represents the type of action for the theme class context.
@@ -90,3 +99,9 @@ export type IPersistanceConfiguration = {
  * Represents partial configuration options for persisting theme data.
  */
 export type IPersistanceConfigurationProp = Partial<IPersistanceConfiguration>;
+
+export type IThemeChangeSideEffect = (
+    current: IThemeClassState["current"],
+    previous: IThemeClassState["previous"],
+    class_list: IThemeClassState["theme_classes"]
+) => void;
