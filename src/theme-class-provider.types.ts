@@ -93,6 +93,8 @@ export type IPersistanceConfiguration = {
     key: string;
     /** Indicates whether persistence is disabled. */
     disabled: boolean;
+    /** Clear the persisted data when the component unmounts */
+    clearOnUnload: boolean;
 };
 
 /**

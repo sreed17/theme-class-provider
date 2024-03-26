@@ -48,6 +48,7 @@ interface PropType extends PropsWithChildren {
 const default_persistance_config: IPersistanceConfiguration = {
     key: "theme-data",
     disabled: false,
+    clearOnUnload: false,
 };
 
 /**
@@ -134,6 +135,12 @@ const ThemeClassContextProvider: FC<PropType> = ({
 
         // Set Loading state to false
         setLoadingState(false);
+
+        return () => {
+            if (persist_config.clearOnUnload) {
+                clearPersistedThemeData(key);
+            }
+        };
     }, []);
 
     // Update persisted theme data on theme or theme classes change
