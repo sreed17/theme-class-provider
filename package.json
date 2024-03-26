@@ -1,0 +1,57 @@
+{
+    "name": "theme-class-provider",
+    "version": "1.0.0",
+    "description": "React library providing a ThemeProvider based on a list of class provided.",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc",
+        "test": "jest",
+        "lint": "eslint",
+        "lint:fix": "eslint --fix",
+        "docs:api": "typedoc --out docs/api src",
+        "docs:components": "react-docgen src/**/*.tsx docs/components.json",
+        "docs": "npm run docs:api && npm run docs:components"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sreed17/theme-class-provider.git"
+    },
+    "author": "Sreekanth D",
+    "license": "MIT",
+    "keywords": [
+        "react",
+        "typescript",
+        "theme",
+        "provider",
+        "CSS"
+    ],
+    "jest": {
+        "preset": "ts-jest",
+        "testEnvironment": "jsdom"
+    },
+    "dependencies": {
+        "immer": "^10.0.4",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "^6.4.2",
+        "@testing-library/react": "^14.2.2",
+        "@types/jest": "^29.5.12",
+        "@types/react": "^18.2.71",
+        "@types/react-dom": "^18.2.22",
+        "@typescript-eslint/eslint-plugin": "^7.4.0",
+        "@typescript-eslint/parser": "^7.4.0",
+        "eslint": "^8.57.0",
+        "eslint-plugin-react": "^7.34.1",
+        "eslint-plugin-tsdoc": "^0.2.17",
+        "jest": "^29.7.0",
+        "jest-environment-jsdom": "^29.7.0",
+        "prettier": "3.2.5",
+        "react-docgen": "^7.0.3",
+        "ts-jest": "^29.1.2",
+        "tslint-config-prettier": "^1.18.0",
+        "typedoc": "^0.25.12",
+        "typescript": "^5.4.3"
+    }
+}
