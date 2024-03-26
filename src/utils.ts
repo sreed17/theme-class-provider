@@ -163,7 +163,7 @@ export function updateThemeClassOfDocumentElement(
     theme_classes: string[]
 ) {
     try {
-        if (previous) {
+        if (previous !== null) {
             const previous_class = theme_classes[previous];
             document.documentElement.classList.remove(previous_class);
         }
@@ -172,4 +172,14 @@ export function updateThemeClassOfDocumentElement(
     } catch (err) {
         console.error("Error changing the document theme class");
     }
+}
+
+/**
+ * Compute the non negative modulo operation
+ * @param n - The divident
+ * @param m - The divisor
+ * @returns - Non-negative remainder when n is dividen by m
+ */
+export function mod(n: number, m: number) {
+    return ((n % m) + m) % m;
 }

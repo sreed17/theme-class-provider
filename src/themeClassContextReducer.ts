@@ -8,7 +8,7 @@ import {
     IThemeClassAction,
     IThemeClassState,
 } from "./theme-class-provider.types";
-import { isValidPayload } from "./utils";
+import { isValidPayload, mod } from "./utils";
 
 /**
  * Reducer function for managing state in the theme class context.
@@ -34,7 +34,6 @@ function themeClassContextReducer(
 
         // Reset error at each call
         draft.error = null;
-
         // Process action
         switch (action_type) {
             case "SET_LOADING_STATE": {
@@ -81,8 +80,8 @@ function themeClassContextReducer(
             case "TOGGLE_THEME": {
                 const n_themes = draft.theme_classes.length;
                 const current = draft.current;
-                const next_theme = current + 1 >= n_themes ? 0 : current + 1;
                 draft.previous = current;
+                const next_theme = current + 1 >= n_themes ? 0 : current + 1;
                 draft.current = next_theme;
                 break;
             }
@@ -115,7 +114,7 @@ function themeClassContextReducer(
 
                 for (let i = 0; i < n; i++) {
                     const rel_index = i - theme_index;
-                    const index = rel_index < 0 ? rel_index % n : rel_index;
+                    const index = rel_index < 0 ? mod(rel_index, n) : rel_index;
                     theme_classes[index] = draft.theme_classes[i];
                     if (i === draft.previous) {
                         draft.previous = index;
@@ -123,7 +122,6 @@ function themeClassContextReducer(
                 }
 
                 // Update state with reordered theme classes and reset current theme index
-                draft.theme_classes = theme_classes;
                 draft.theme_classes = theme_classes;
                 draft.current = 0;
                 break;

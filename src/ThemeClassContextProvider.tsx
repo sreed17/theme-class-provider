@@ -138,13 +138,14 @@ const ThemeClassContextProvider: FC<PropType> = ({
 
     // Update persisted theme data on theme or theme classes change
     useEffect(() => {
-        if (!state.is_loading || !persist_config.disabled) {
-            setPersistedThemeData(persistedThemeKey, persistedThemeData);
-            if (onChange) {
-                onChange(state.current, state.previous, state.theme_classes);
-            }
+        if (state.is_loading || persist_config.disabled) {
+            return;
         }
-    }, [state.current, state.theme_classes]);
+        setPersistedThemeData(persistedThemeKey, persistedThemeData);
+        if (onChange) {
+            onChange(state.current, state.previous, state.theme_classes);
+        }
+    }, [state.current, state.previous, state.theme_classes]);
 
     // Theme class context value
     const value: IThemeClassContext = {
