@@ -2,7 +2,7 @@
 
 theme-class-provider is a React library that provides a ThemeProvider based on a list of classes provided.
 
-![Brief Overview](docs\lib_overview.png)
+![Brief Overview](docs/lib_overview.png)
 
 ## Installation
 
