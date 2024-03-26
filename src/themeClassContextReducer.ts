@@ -91,6 +91,7 @@ function themeClassContextReducer(
              */
             case "LOAD_STATE": {
                 const { current, theme_classes } = action.payload;
+                draft.previous = null;
                 draft.current = current;
                 draft.theme_classes = theme_classes;
                 break;
