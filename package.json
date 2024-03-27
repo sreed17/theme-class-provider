@@ -1,6 +1,6 @@
 {
     "name": "theme-class-provider",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "React library providing a ThemeProvider based on a list of class provided.",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
