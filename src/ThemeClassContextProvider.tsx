@@ -136,7 +136,7 @@ const ThemeClassContextProvider: FC<PropType> = ({
         setLoadingState(false);
 
         return () => {
-            if (persist_config.clearOnUnload) {
+            if (persist_config.clearOnUnload || persist_config.disabled) {
                 clearPersistedThemeData(key);
             }
         };
@@ -151,7 +151,7 @@ const ThemeClassContextProvider: FC<PropType> = ({
         if (onChange) {
             onChange(state.current, state.previous, state.theme_classes);
         }
-    }, [state.current, state.previous, state.theme_classes]);
+    }, [state]);
 
     // Theme class context value
     const value: IThemeClassContext = {
