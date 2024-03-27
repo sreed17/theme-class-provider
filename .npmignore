@@ -1,0 +1,10 @@
+src
+tests
+.vscode
+rollup.config.ts
+.prettierrc
+.eslintrc.json
+docs
+.github
+.gitignore
+tsconfig.json

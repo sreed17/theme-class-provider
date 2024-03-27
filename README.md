@@ -2,7 +2,7 @@
 
 theme-class-provider is a React library that provides a ThemeProvider based on a list of classes provided.
 
-![Brief Overview](docs/lib_overview.png)
+![Brief Overview](https://github.com/sreed17/theme-class-provider/blob/master/docs/lib_overview.png?raw=true)
 
 ## Installation
 
@@ -61,7 +61,7 @@ export default MyComponent;
 
 ## Contributing
 
-Contributions are welcome! If you have any ideas, suggestions, or bug fixes, please open an issue or submit a pull request on [GitHub](https://github.com/sreed17/theme-class-provider.git).
+Contributions are welcome! If you have any ideas, suggestions, or bug fixes, please open an issue or submit a pull request on [GitHub](https://github.com/sreed17/theme-class-provider).
 
 ## License
 

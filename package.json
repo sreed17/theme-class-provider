@@ -5,6 +5,7 @@
     "main": "dist/index.js",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
+    "private": "false",
     "scripts": {
         "build": "rollup --config rollup.config.ts --configPlugin typescript",
         "test": "jest",
@@ -13,11 +14,15 @@
         "lint:tsc": "tsc",
         "docs:api": "typedoc --out docs/api src",
         "docs:components": "react-docgen src/**/*.tsx docs/components.json",
-        "docs": "npm run docs:api && npm run docs:components"
+        "docs": "npm run docs:api && npm run docs:components",
+        "commit": "git add . && cz"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/sreed17/theme-class-provider.git"
+        "url": "https://github.com/sreed17/theme-class-provider"
+    },
+    "bugs": {
+        "url": "https://github.com/sreed17/theme-class-provider/issues"
     },
     "author": "Sreekanth D",
     "license": "MIT",
@@ -45,6 +50,8 @@
         "@types/rollup-plugin-peer-deps-external": "^2.2.5",
         "@typescript-eslint/eslint-plugin": "^7.4.0",
         "@typescript-eslint/parser": "^7.4.0",
+        "commitizen": "^4.3.0",
+        "cz-conventional-changelog": "^3.3.0",
         "eslint": "^8.57.0",
         "eslint-plugin-react": "^7.34.1",
         "eslint-plugin-tsdoc": "^0.2.17",
@@ -68,5 +75,10 @@
         "immer": "^10.0.4",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
     }
 }
