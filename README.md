@@ -1,4 +1,4 @@
-# @trivialibs/theme-class-provider
+# theme-class-provider
 
 A react library that simplifies theming in your applications. It offers a ThemeClassProvider component and a convenient hook (useThemeClass) to access and manage the theme throughout your app.
 
@@ -9,9 +9,9 @@ A react library that simplifies theming in your applications. It offers a ThemeC
 You can install theme-class-provider using npm or yarn:
 
 ```bash
-npm install @trivialibs/theme-class-provider
+npm install theme-class-provider
 # or
-yarn add @trivialibs/theme-class-provider
+yarn add theme-class-provider
 ```
 
 ## Usage
@@ -23,13 +23,13 @@ To integrate `theme-class-provider` into your React application, follow these st
 First, install the `theme-class-provider` package via npm or yarn:
 
 ```bash
-npm install @trivialibs/theme-class-provider
+npm install theme-class-provider
 ```
 
 or
 
 ```bash
-yarn add @trivialibs/theme-class-provider
+yarn add theme-class-provider
 ```
 
 ### 2. Usage
