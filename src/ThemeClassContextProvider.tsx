@@ -2,7 +2,6 @@
  * @file ThemeClassContextProvider.tsx
  * @description Provider component for managing theme class context.
  */
-"use client";
 
 import React, {
     FC,

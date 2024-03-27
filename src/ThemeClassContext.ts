@@ -1,5 +1,3 @@
-"use client";
-
 import { createContext } from "react";
 import { IThemeClassContext } from "./theme-class-provider.types";
 

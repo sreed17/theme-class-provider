@@ -16,5 +16,6 @@
         "sourceType": "module"
     },
     "plugins": ["@typescript-eslint", "react", "eslint-plugin-tsdoc"],
-    "rules": {}
+    "rules": {},
+    "ignorePatterns": ["node_modules/", "dist/", "build/"]
 }
