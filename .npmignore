@@ -8,3 +8,7 @@ docs
 .github
 .gitignore
 tsconfig.json
+*.config.*
+.releaserc
+.releaserc.*
+lib_overview.png
