@@ -183,10 +183,12 @@ Contributions are welcome! If you have any ideas, suggestions, or bug fixes, ple
 
 !IMPORTANT: The project uses semantic-release and commitizen with cz-conventional-changelog. Use `npm run commit`to commit changes before pushing changes.
 
+### Code of Conduct
+
+Please note that this project is governed by a [Code of Conduct](https://github.com/sreed17/theme-class-provider/blob/master/CODE_OF_CONDUCT.md). By participating in this project, you agree to abide by its terms.
+
+We appreciate your contributions to making this project better for everyone!
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/sreed17/theme-class-provider/blob/master/LICENSE) file for details.
-
-```
-
-```

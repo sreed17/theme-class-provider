@@ -6,7 +6,7 @@ Thank you for considering contributing to theme-class-provider! Contributions fr
 
 If you'd like to contribute to [Your Project Name], please follow these guidelines:
 
-1. **Opening Issues**: If you encounter a bug, have a feature request, or want to suggest an improvement, please open an issue on [GitHub](https://github.com/your-username/your-project-name/issues) to discuss it.
+1. **Opening Issues**: If you encounter a bug, have a feature request, or want to suggest an improvement, please open an issue on [GitHub](https://github.com/sreed17/theme-class-provider/issues) to discuss it.
 
 2. **Submitting Pull Requests**: If you'd like to contribute directly, fork the repository, make your changes, and submit a pull request. Please ensure your pull request adheres to the following guidelines:
 
