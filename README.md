@@ -159,7 +159,29 @@ For detailed release notes, please see [CHANGELOG.md](https://github.com/sreed17
 
 ## Contributing
 
+Thank you for considering contributing to this project! Contributions are welcome and encouraged.
+
+### How to Contribute
+
+If you have any ideas, suggestions, or bug fixes, please follow these steps:
+
+1. **Open an Issue**: If you encounter a bug, have a feature request, or want to suggest an improvement, please open an issue on [GitHub](https://github.com/sreed17/theme-class-provider/issues) to discuss it.
+
+2. **Submit a Pull Request**: If you'd like to contribute directly, fork the repository, make your changes, and submit a pull request. Please ensure your pull request follows our [contribution guidelines](https://github.com/sreed17/theme-class-provider/blob/master/CONTRIBUTING.md) and adheres to our coding standards.
+
+### Development Workflow
+
+This project uses semantic-release, commitizen, and cz-conventional-changelog to automate versioning and generate changelogs. To commit changes, please use the following command:
+
+```bash
+npm run commit
+```
+
+## Contributing
+
 Contributions are welcome! If you have any ideas, suggestions, or bug fixes, please open an issue or submit a pull request on [GitHub](https://github.com/sreed17/theme-class-provider).
+
+!IMPORTANT: The project uses semantic-release and commitizen with cz-conventional-changelog. Use `npm run commit`to commit changes before pushing changes.
 
 ## License
 
